@@ -1,4 +1,14 @@
 require "minitest/autorun"
-require_relative "parking"
+require "parking"
 
 class TestCars < Minitest::Test
+
+ if output = "#{floats.to_s} has been parked."
+  puts "added to system" 
+ if output = "#{float.to_s} has left the parking area."
+  puts "deleted from system"
+ else
+  "test not conducted"
+end
+end
+end 

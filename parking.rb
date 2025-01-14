@@ -1,4 +1,4 @@
-require_relative "float"
+require_relative "Float"
 
 class Parking
   def initialize
@@ -46,7 +46,7 @@ class Parking
   private
   
   def drive_in(animal, vehicle, color, decoration)
-    float = float.new(animal, vehicle, color, decoration)
+    float = Float.new(animal, vehicle, color, decoration)
     @floats.push(float)
     puts "#{floats.to_s} has been parked."
   end
