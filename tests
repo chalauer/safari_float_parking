@@ -1,0 +1,4 @@
+require "minitest/autorun"
+require_relative "parking"
+
+class TestCars < Minitest::Test
