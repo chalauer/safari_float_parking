@@ -1,4 +1,4 @@
-require_relative "Float"
+require_relative "float"
 
 class Parking
   def initialize
@@ -46,14 +46,14 @@ class Parking
   private
   
   def drive_in(animal, vehicle, color, decoration)
-    float = Float.new(animal, vehicle, color, decoration)
-    @floats.push(float)
-    puts "#{floats.to_s} has been parked."
+    float = FloatV.new(animal, vehicle, color, decoration)
+    @float.push(float)
+    puts "#{float.to_s} has been parked."
   end
   
   def drive_out(animal, vehicle, color, decoration)
-    float = @floats.find {|float| float.to_s}
-    @floats.delete(float)
+    float = @float.find {|float| float.to_s}
+    @float.delete(float)
     puts "#{float.to_s} has left the parking area."
   end
   
@@ -69,10 +69,10 @@ class Parking
   end
   
   def options()
-    if @floats.empty?
+    if @float.empty?
       "No floats are parked here at the moment."
     else
-      @floats.each do |float|
+      @float.each do |float|
         puts float.to_s
       end
     end
