@@ -52,9 +52,16 @@ class Parking
   end
   
   def drive_out(animal, vehicle, color, decoration)
-    float = @float.find {|float| float.to_s}
-    @float.delete(float)
-    puts "#{float.to_s} has left the parking area."
+    float = @float.find do |float|
+      float.animal == animal && float.vehicle == vehicle && float.color == color && float.decoration == decoration
+    end
+  
+    if float
+      @float.delete(float)
+      puts "#{float.to_s} has left the parking area."
+    else
+      puts "No float matches the description features provided."
+    end
   end
   
   def log()
